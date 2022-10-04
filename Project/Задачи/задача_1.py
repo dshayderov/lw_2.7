@@ -6,7 +6,7 @@ if __name__ == "__main__":
     # Определим универсальное множество
     gl = set("aeyuioаеёиоуыэюя")
 
-    s = set(input("Введите строку:\n").lower())
+    s = input("Введите строку:\n").lower()
 
-    x = len(s.intersection(gl))
+    x = sum(i in gl for i in s)
     print(f"Кол-во гласных в строке: {x}")
